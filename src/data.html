@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="user.json"></script>
+</head>
+<body >
+    <!-- <script >
+         var myJason={ "id": 1,
+        "name": "Leanne Graham",
+        "username": "Bret",
+        "email": "Sincere@april.biz",
+        "address": {
+            "street": "Kulas Light",
+            "suite": "Apt. 556",
+            "city": "Gwenborough",
+            "zipcode": "92998-3874",
+            "geo": {
+                "lat": "-37.3159",
+                "lng": "81.1496"
+                }
+          }
+        }
+       var parsed = JSON.stringify(myJason);
+       var p=JSON.parse(parsed);
+       alert(p.address.city);
+      
+
+       
+        
+    </script> -->
+    <!-- <input type="button" onclick="change()" value="CHANGE"> -->
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+
+    <script>
+        // function change(){
+        //     document.getElementById("d1").innerHTML=JSON.stringify(myJSON.name);
+
+        // }
+        
+        var xttp= new XMLHttpRequest();
+       
+        xttp.onreadyStateChange=function(){
+             if(this.readyState == 4 && this.status == 200){
+                //var d = JSON.stringify(this.responseText);
+                var ta = JSON.parse(this.response.JSONs);
+                //document.getElementById("d1").innerText=ta;
+                console.log(ta);
+             }
+            // else{
+            //     alert("error");
+            // }
+        };
+        xttp.open("Get","user.json",true);
+        xttp.send();           
+        // ----------------------------------------
+        // var myd = JSON.stringify(data);    
+        // var mydata = JSON.parse(myd);
+        // document.getElementById("d1").innerHTML=JSON.stringify(mydata);
+        // document.getElementById("d2").innerHTML=JSON.stringify(mydata.name);
+        // document.getElementById("d3").innerHTML=JSON.stringify(mydata.username);
+        // document.getElementById("d4").innerHTML=JSON.stringify(mydata.email);
+
+        // alert(mydata.id);
+        // alert(mydata.name);
+        // alert(mydata.username);
+        // alert(mydata.email);
+
+
+
+        
+    </script>
+   
+</body>
+</html>

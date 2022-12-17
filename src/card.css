@@ -1,0 +1,17 @@
+.App {
+text-align: center;
+}
+
+.App-logo {
+height: 40vmin;
+pointer-events: none;
+}
+.block1{
+  border: 10px;
+  border-style: solid;
+  background-color: aqua;
+  height: 50px;
+  width: 50px;
+
+
+}
